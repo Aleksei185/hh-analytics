@@ -1,0 +1,20 @@
+# Данные PostgreSQL
+postgres_data/
+
+# Данные Superset
+superset_data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Логи
+*.log
+
+# Переменные окружения
+.env
+
+# Системные
+.DS_Store
+Thumbs.db

@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install flake8
+      - name: Lint Python code
+        run: |
+          flake8 collect_vacancies.py --max-line-length=120 --ignore=E501,W503
+
+  check-sql:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check SQL files exist
+        run: |
+          if [ ! -f sql/analytics_queries.sql ]; then
+            echo "SQL file not found"
+            exit 1
+          fi
+          echo "SQL file found"
