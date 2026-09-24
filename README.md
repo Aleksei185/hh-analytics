@@ -63,12 +63,12 @@ hh-analytics/
    ```bash
    python collect_vacancies.py
 6. Выполнить SQL из sql/analytics_queries.sql
-7. Открыть Superset: http://localhost:8088(пользователь и пароль - admin)
+7. Открыть Superset: http://localhost:8088 (пользователь и пароль - admin)
 
 
 ## Дашборд
 
-![Дашборд](screenshots/HH%20Analytics.png)
+![Дашборд](screenshots/HH Analytics%20.png)
 
 ## Автор
 
