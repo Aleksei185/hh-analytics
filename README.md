@@ -68,7 +68,7 @@ hh-analytics/
 
 ## Дашборд
 
-![Дашборд](screenshots/HH Analytics%20.png)
+![Дашборд](screenshots/HH%20Analytics.png)
 
 ## Автор
 
